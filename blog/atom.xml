@@ -2,11 +2,67 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://abhilash-deliverain.github.io/deliverain-labs/blog</id>
     <title>Deliverain Labs Blog</title>
-    <updated>2021-08-26T00:00:00.000Z</updated>
+    <updated>2025-11-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://abhilash-deliverain.github.io/deliverain-labs/blog"/>
     <subtitle>Deliverain Labs Blog</subtitle>
     <icon>https://abhilash-deliverain.github.io/deliverain-labs/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Bringing Substation Automation to the Lab - Our IEC 61850 Simulator]]></title>
+        <id>https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator</id>
+        <link href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator"/>
+        <updated>2025-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How we built a powerful IEC 61850 simulator on top of libIEC61850, with OPC DA integration.]]></summary>
+        <content type="html"><![CDATA[<p>If you’ve ever worked with <strong>substation automation systems</strong>, you already know this truth: testing and
+integration can be a headache.</p>
+<p>Every time you need to validate an <strong>IEC 61850</strong> setup, you’re chasing hardware IEDs, juggling SCL files,
+waiting for network configurations, and praying your test environment behaves like the real one.</p>
+<p>At <strong>Deliverain</strong>, we kept running into this same pain — over and over again.<br>
+<!-- -->So, we decided to do something about it.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-why-we-built-it">⚡ Why We Built It<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-why-we-built-it" class="hash-link" aria-label="Direct link to ⚡ Why We Built It" title="Direct link to ⚡ Why We Built It" translate="no">​</a></h2>
+<p>We wanted to give engineers, testers, and integrators a way to bring <strong>substation automation into
+the lab</strong> — without relying on hardware, without complex setups, and without losing the realism of
+an actual IEC 61850 network.</p>
+<p>Our goal was simple:</p>
+<blockquote>
+<p>“Make it easy to simulate, visualize, and validate substation communication — anytime, anywhere.”</p>
+</blockquote>
+<p>So we started building our own <strong>IEC 61850 Simulator</strong>, powered by the open-source <strong>libIEC61850</strong>
+stack, and then extended it far beyond basic simulation.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-what-the-simulator-does">🧩 What the Simulator Does<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-what-the-simulator-does" class="hash-link" aria-label="Direct link to 🧩 What the Simulator Does" title="Direct link to 🧩 What the Simulator Does" translate="no">​</a></h2>
+<p>Our simulator emulates the behavior of real <strong>Intelligent Electronic Devices (IEDs)</strong> — the same devices
+used in modern substations — and lets you interact with them through familiar tools and protocols.</p>
+<p>Here’s what’s inside:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-scl-file-support">📂 SCL File Support<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-scl-file-support" class="hash-link" aria-label="Direct link to 📂 SCL File Support" title="Direct link to 📂 SCL File Support" translate="no">​</a></h3>
+<p>Just load your <strong>SCD</strong>, <strong>ICD</strong>, or <strong>CID</strong> file — the simulator automatically parses and builds the IED data
+model for you.<br>
+<!-- -->No manual setup. No copy-paste errors.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-model-viewer">🧠 Model Viewer<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-model-viewer" class="hash-link" aria-label="Direct link to 🧠 Model Viewer" title="Direct link to 🧠 Model Viewer" translate="no">​</a></h3>
+<p>Visualize your logical nodes, data objects, and attributes through an intuitive tree view.<br>
+<!-- -->It’s like opening up an IED and seeing how it thinks.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-multi-ied-simulation">🔄 Multi-IED Simulation<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-multi-ied-simulation" class="hash-link" aria-label="Direct link to 🔄 Multi-IED Simulation" title="Direct link to 🔄 Multi-IED Simulation" translate="no">​</a></h3>
+<p>Need to simulate multiple IEDs talking to each other? Done.<br>
+<!-- -->Each IED runs as an independent instance, complete with its own configuration and data model.</p>
+<hr>
+<p>This simulator helps <strong>bring substation automation to the lab</strong> — enabling engineers to test, visualize, and validate
+IEC 61850 communication efficiently and realistically.</p>
+<p>Stay tuned for upcoming posts where we’ll explore:</p>
+<ul>
+<li class="">Integrating with <strong>OPC DA / UA</strong> for data interoperability</li>
+<li class="">Extending simulation to cover <strong>GOOSE</strong> and <strong>MMS</strong> messaging</li>
+<li class="">Visual dashboards for IED performance insights</li>
+</ul>
+<hr>
+<p><em>Written by <strong>VimalKanth Tummala</strong>, Deliverain Engineering Team.</em></p>]]></content>
+        <author>
+            <name>VimalKanth Tummala</name>
+        </author>
+        <category label="IEC61850" term="IEC61850"/>
+        <category label="OPC" term="OPC"/>
+        <category label="Simulator" term="Simulator"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://abhilash-deliverain.github.io/deliverain-labs/blog/welcome</id>
