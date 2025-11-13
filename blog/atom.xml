@@ -8,54 +8,106 @@
     <subtitle>Deliverain Labs Blog</subtitle>
     <icon>https://labs.deliverain.com/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Bringing Substation Automation to the Lab - Our IEC 61850 Simulator]]></title>
+        <title type="html"><![CDATA[Bringing Substation Automation to the Lab — Building Our IEC 61850 Simulator]]></title>
         <id>https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator</id>
         <link href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator"/>
         <updated>2025-11-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How we built a powerful IEC 61850 simulator on top of libIEC61850, with OPC DA integration.]]></summary>
-        <content type="html"><![CDATA[<p>If you’ve ever worked with <strong>substation automation systems</strong>, you already know this truth: testing and
-integration can be a headache.</p>
-<p>Every time you need to validate an <strong>IEC 61850</strong> setup, you’re chasing hardware IEDs, juggling SCL files,
-waiting for network configurations, and praying your test environment behaves like the real one.</p>
+        <summary type="html"><![CDATA[How Deliverain built a full-featured IEC 61850 simulator using libIEC61850 with OPC DA integration.]]></summary>
+        <content type="html"><![CDATA[<p>If you’ve ever worked with <strong>substation automation systems</strong>, you already know this truth: testing and integration can be a headache.<br>
+<!-- -->Every time you need to validate an <strong>IEC 61850</strong> setup, you’re chasing hardware IEDs, juggling SCL files, waiting for network configurations, and praying your test environment behaves like the real one.</p>
 <p>At <strong>Deliverain</strong>, we kept running into this same pain — over and over again.<br>
 <!-- -->So, we decided to do something about it.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-why-we-built-it">⚡ Why We Built It<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-why-we-built-it" class="hash-link" aria-label="Direct link to ⚡ Why We Built It" title="Direct link to ⚡ Why We Built It" translate="no">​</a></h2>
-<p>We wanted to give engineers, testers, and integrators a way to bring <strong>substation automation into
-the lab</strong> — without relying on hardware, without complex setups, and without losing the realism of
-an actual IEC 61850 network.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-why-we-built-it">💡 Why We Built It<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-why-we-built-it" class="hash-link" aria-label="Direct link to 💡 Why We Built It" title="Direct link to 💡 Why We Built It" translate="no">​</a></h2>
+<p>We wanted to give engineers, testers, and integrators a way to bring <strong>substation automation into the lab</strong> — without relying on hardware, without complex setups, and without losing the realism of an actual IEC 61850 network.</p>
 <p>Our goal was simple:</p>
 <blockquote>
 <p>“Make it easy to simulate, visualize, and validate substation communication — anytime, anywhere.”</p>
 </blockquote>
-<p>So we started building our own <strong>IEC 61850 Simulator</strong>, powered by the open-source <strong>libIEC61850</strong>
-stack, and then extended it far beyond basic simulation.</p>
+<p>So we started building our own <strong>IEC 61850 Simulator</strong>, powered by the open-source <strong>libIEC61850</strong> stack, and then extended it far beyond basic simulation.</p>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-what-the-simulator-does">🧩 What the Simulator Does<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-what-the-simulator-does" class="hash-link" aria-label="Direct link to 🧩 What the Simulator Does" title="Direct link to 🧩 What the Simulator Does" translate="no">​</a></h2>
-<p>Our simulator emulates the behavior of real <strong>Intelligent Electronic Devices (IEDs)</strong> — the same devices
-used in modern substations — and lets you interact with them through familiar tools and protocols.</p>
+<p>Our simulator emulates the behavior of real <strong>Intelligent Electronic Devices (IEDs)</strong> — the same devices used in modern substations — and lets you interact with them through familiar tools and protocols.</p>
 <p>Here’s what’s inside:</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-scl-file-support">📂 SCL File Support<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-scl-file-support" class="hash-link" aria-label="Direct link to 📂 SCL File Support" title="Direct link to 📂 SCL File Support" translate="no">​</a></h3>
-<p>Just load your <strong>SCD</strong>, <strong>ICD</strong>, or <strong>CID</strong> file — the simulator automatically parses and builds the IED data
-model for you.<br>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-scl-file-support">🗂️ SCL File Support<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#%EF%B8%8F-scl-file-support" class="hash-link" aria-label="Direct link to 🗂️ SCL File Support" title="Direct link to 🗂️ SCL File Support" translate="no">​</a></h3>
+<p>Just load your <strong>SCD</strong>, <strong>ICD</strong>, or <strong>CID</strong> file — the simulator automatically parses and builds the IED data model for you.<br>
 <!-- -->No manual setup. No copy-paste errors.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-model-viewer">🧠 Model Viewer<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-model-viewer" class="hash-link" aria-label="Direct link to 🧠 Model Viewer" title="Direct link to 🧠 Model Viewer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-model-viewer">👀 Model Viewer<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-model-viewer" class="hash-link" aria-label="Direct link to 👀 Model Viewer" title="Direct link to 👀 Model Viewer" translate="no">​</a></h3>
 <p>Visualize your logical nodes, data objects, and attributes through an intuitive tree view.<br>
 <!-- -->It’s like opening up an IED and seeing how it thinks.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-multi-ied-simulation">🔄 Multi-IED Simulation<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-multi-ied-simulation" class="hash-link" aria-label="Direct link to 🔄 Multi-IED Simulation" title="Direct link to 🔄 Multi-IED Simulation" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-multi-ied-simulation">🔁 Multi-IED Simulation<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-multi-ied-simulation" class="hash-link" aria-label="Direct link to 🔁 Multi-IED Simulation" title="Direct link to 🔁 Multi-IED Simulation" translate="no">​</a></h3>
 <p>Need to simulate multiple IEDs talking to each other? Done.<br>
 <!-- -->Each IED runs as an independent instance, complete with its own configuration and data model.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-interoperability--standards-support">🧩 Interoperability &amp; Standards Support<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-interoperability--standards-support" class="hash-link" aria-label="Direct link to 🧩 Interoperability &amp; Standards Support" title="Direct link to 🧩 Interoperability &amp; Standards Support" translate="no">​</a></h3>
+<p>Supports <strong>IEC 61850 Edition 1</strong> and <strong>Edition 2</strong>, ensuring compatibility with IEDs and systems from any manufacturer that follow the standard.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-mms--goose-protocol-support">⚙️ MMS &amp; GOOSE Protocol Support<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#%EF%B8%8F-mms--goose-protocol-support" class="hash-link" aria-label="Direct link to ⚙️ MMS &amp; GOOSE Protocol Support" title="Direct link to ⚙️ MMS &amp; GOOSE Protocol Support" translate="no">​</a></h3>
+<p>Handles full IEC 61850 communication — <strong>MMS</strong> for client-server interactions and <strong>GOOSE</strong> for fast event-based messaging.<br>
+<!-- -->You can test complete data flow exactly like in a live substation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-opc-da-server-integration">🔌 OPC DA Server Integration<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-opc-da-server-integration" class="hash-link" aria-label="Direct link to 🔌 OPC DA Server Integration" title="Direct link to 🔌 OPC DA Server Integration" translate="no">​</a></h3>
+<p>All simulated IEC 61850 data points can be exposed as <strong>OPC DA tags</strong>, so your SCADA, DCS, or historian can consume data in real time.<br>
+<!-- -->No bridges, no connectors, no hassle.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-network-sniffer">🕵️ Network Sniffer<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#%EF%B8%8F-network-sniffer" class="hash-link" aria-label="Direct link to 🕵️ Network Sniffer" title="Direct link to 🕵️ Network Sniffer" translate="no">​</a></h3>
+<p>Monitor IEC 61850 traffic live without keeping Wireshark open. Perfect for debugging and validation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-real-time-monitoring">⏱️ Real-Time Monitoring<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#%EF%B8%8F-real-time-monitoring" class="hash-link" aria-label="Direct link to ⏱️ Real-Time Monitoring" title="Direct link to ⏱️ Real-Time Monitoring" translate="no">​</a></h3>
+<p>Watch and update data objects in real time. Track live values, event changes, and system activity across all simulated IEDs.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-data-manipulation">✋ Data Manipulation<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-data-manipulation" class="hash-link" aria-label="Direct link to ✋ Data Manipulation" title="Direct link to ✋ Data Manipulation" translate="no">​</a></h3>
+<p>Read, write, and control IED data attributes. Inject test values, simulate alarms, or trigger GOOSE events instantly to validate SCADA or control-system response.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-network-detection">🌐 Network Detection<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-network-detection" class="hash-link" aria-label="Direct link to 🌐 Network Detection" title="Direct link to 🌐 Network Detection" translate="no">​</a></h3>
+<p>Automatically detects active IEC 61850 endpoints on your network — setup becomes faster and cleaner.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-automated-testing--scenario-replay">🤖 Automated Testing &amp; Scenario Replay<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-automated-testing--scenario-replay" class="hash-link" aria-label="Direct link to 🤖 Automated Testing &amp; Scenario Replay" title="Direct link to 🤖 Automated Testing &amp; Scenario Replay" translate="no">​</a></h3>
+<p>Bring repeatability and precision to your IEC 61850 testing.<br>
+<!-- -->Upload XML or CSV-based test scripts directly into the simulator to automatically execute sequences of operations.</p>
 <hr>
-<p>This simulator helps <strong>bring substation automation to the lab</strong> — enabling engineers to test, visualize, and validate
-IEC 61850 communication efficiently and realistically.</p>
-<p>Stay tuned for upcoming posts where we’ll explore:</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-under-the-hood">🧠 Under the Hood<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-under-the-hood" class="hash-link" aria-label="Direct link to 🧠 Under the Hood" title="Direct link to 🧠 Under the Hood" translate="no">​</a></h2>
+<p>The engine is built on <strong>libIEC61850</strong> — the open-source implementation of the IEC 61850 protocol stack.<br>
+<!-- -->On top of it, we’ve added:</p>
 <ul>
-<li class="">Integrating with <strong>OPC DA / UA</strong> for data interoperability</li>
-<li class="">Extending simulation to cover <strong>GOOSE</strong> and <strong>MMS</strong> messaging</li>
-<li class="">Visual dashboards for IED performance insights</li>
+<li class="">A multi-threaded simulation layer for managing multiple IEDs</li>
+<li class="">A dynamic OPC DA mapping engine</li>
+<li class="">Configuration and control interfaces for UI and scripting</li>
+<li class="">Diagnostics tools for performance and message tracing</li>
+</ul>
+<p>All of this runs on standard Windows and Linux environments — ideal for labs, VMs, or even cloud deployments.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-how-people-are-using-it">🧰 How People Are Using It<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-how-people-are-using-it" class="hash-link" aria-label="Direct link to 🧰 How People Are Using It" title="Direct link to 🧰 How People Are Using It" translate="no">​</a></h2>
+<p>We’ve seen it used in creative ways:</p>
+<ul>
+<li class="">🧪 <strong>SCADA and DCS Integration Testing</strong> – Validate client systems before hardware arrives.</li>
+<li class="">🧭 <strong>Training &amp; Education</strong> – Teach IEC 61850 concepts interactively.</li>
+<li class="">⚡ <strong>Network Validation</strong> – Recreate real-world issues in a controlled setup.</li>
+<li class="">🔄 <strong>OPC Bridge Testing</strong> – Check interoperability of live data streams.</li>
+<li class="">🤖 <strong>Automated Scenario Replay</strong> – Execute XML/CSV scripts for repeatable tests.</li>
 </ul>
 <hr>
-<p><em>Written by <strong>Vinod Kumar R</strong>, Deliverain Engineering Team.</em></p>]]></content>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-what-makes-it-different">🧭 What Makes It Different<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-what-makes-it-different" class="hash-link" aria-label="Direct link to 🧭 What Makes It Different" title="Direct link to 🧭 What Makes It Different" translate="no">​</a></h2>
+<p>Unlike many simulators, ours was built <strong>by engineers for engineers</strong>.<br>
+<!-- -->It’s:</p>
+<ul>
+<li class="">Open at the core (libIEC61850)</li>
+<li class="">Interoperable by design (OPC DA integration)</li>
+<li class="">Intuitive to use (no scripting needed for standard cases)</li>
+<li class="">Scalable and affordable (no device limits, no license traps)</li>
+</ul>
+<p>You can start testing in minutes and scale as your projects grow.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-whats-next">🔭 What’s Next<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-whats-next" class="hash-link" aria-label="Direct link to 🔭 What’s Next" title="Direct link to 🔭 What’s Next" translate="no">​</a></h2>
+<p>We’re already working on:</p>
+<ul>
+<li class=""><strong>OPC UA support</strong></li>
+<li class=""><strong>Report Control Block (RCB)</strong> – event-driven reporting</li>
+<li class=""><strong>Sampled Values (SV)</strong> – real-time analog streaming</li>
+<li class=""><strong>File Services</strong> – exchange files per IEC 61850 standard</li>
+<li class=""><strong>Performance benchmarking</strong> for large configurations</li>
+<li class=""><strong>Remote collaboration</strong> for cloud-based testing</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-our-goal">❤️ Our Goal<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#%EF%B8%8F-our-goal" class="hash-link" aria-label="Direct link to ❤️ Our Goal" title="Direct link to ❤️ Our Goal" translate="no">​</a></h2>
+<p>Substation automation shouldn’t be locked behind expensive tools or hardware dependencies.<br>
+<!-- -->We want IEC 61850 to be accessible, understandable, and experiment-friendly — empowering more engineers to build, learn, and innovate confidently.</p>
+<p>Deliverain Labs is where we’re sharing that journey.<br>
+<!-- -->If you work with substation automation, industrial data, or protocol integration, we’d love to hear from you — try it, test it, or collaborate with us.</p>
+<hr>
+<p><em>Written by <strong>Vinod Kumar R</strong>, Senior Software Engineer @ Deliverain.</em></p>]]></content>
         <author>
             <name>Vinod Kumar R</name>
         </author>
