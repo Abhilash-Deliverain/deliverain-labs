@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://abhilash-deliverain.github.io/deliverain-labs/blog</id>
+    <id>https://labs.deliverain.com/blog</id>
     <title>Deliverain Labs Blog</title>
     <updated>2025-11-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://abhilash-deliverain.github.io/deliverain-labs/blog"/>
+    <link rel="alternate" href="https://labs.deliverain.com/blog"/>
     <subtitle>Deliverain Labs Blog</subtitle>
-    <icon>https://abhilash-deliverain.github.io/deliverain-labs/img/favicon.ico</icon>
+    <icon>https://labs.deliverain.com/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Bringing Substation Automation to the Lab - Our IEC 61850 Simulator]]></title>
-        <id>https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator</id>
-        <link href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator"/>
+        <id>https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator</id>
+        <link href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator"/>
         <updated>2025-11-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[How we built a powerful IEC 61850 simulator on top of libIEC61850, with OPC DA integration.]]></summary>
         <content type="html"><![CDATA[<p>If you’ve ever worked with <strong>substation automation systems</strong>, you already know this truth: testing and
@@ -20,7 +20,7 @@ waiting for network configurations, and praying your test environment behaves li
 <p>At <strong>Deliverain</strong>, we kept running into this same pain — over and over again.<br>
 <!-- -->So, we decided to do something about it.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-why-we-built-it">⚡ Why We Built It<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-why-we-built-it" class="hash-link" aria-label="Direct link to ⚡ Why We Built It" title="Direct link to ⚡ Why We Built It" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-why-we-built-it">⚡ Why We Built It<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-why-we-built-it" class="hash-link" aria-label="Direct link to ⚡ Why We Built It" title="Direct link to ⚡ Why We Built It" translate="no">​</a></h2>
 <p>We wanted to give engineers, testers, and integrators a way to bring <strong>substation automation into
 the lab</strong> — without relying on hardware, without complex setups, and without losing the realism of
 an actual IEC 61850 network.</p>
@@ -31,18 +31,18 @@ an actual IEC 61850 network.</p>
 <p>So we started building our own <strong>IEC 61850 Simulator</strong>, powered by the open-source <strong>libIEC61850</strong>
 stack, and then extended it far beyond basic simulation.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-what-the-simulator-does">🧩 What the Simulator Does<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-what-the-simulator-does" class="hash-link" aria-label="Direct link to 🧩 What the Simulator Does" title="Direct link to 🧩 What the Simulator Does" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-what-the-simulator-does">🧩 What the Simulator Does<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-what-the-simulator-does" class="hash-link" aria-label="Direct link to 🧩 What the Simulator Does" title="Direct link to 🧩 What the Simulator Does" translate="no">​</a></h2>
 <p>Our simulator emulates the behavior of real <strong>Intelligent Electronic Devices (IEDs)</strong> — the same devices
 used in modern substations — and lets you interact with them through familiar tools and protocols.</p>
 <p>Here’s what’s inside:</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-scl-file-support">📂 SCL File Support<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-scl-file-support" class="hash-link" aria-label="Direct link to 📂 SCL File Support" title="Direct link to 📂 SCL File Support" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-scl-file-support">📂 SCL File Support<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-scl-file-support" class="hash-link" aria-label="Direct link to 📂 SCL File Support" title="Direct link to 📂 SCL File Support" translate="no">​</a></h3>
 <p>Just load your <strong>SCD</strong>, <strong>ICD</strong>, or <strong>CID</strong> file — the simulator automatically parses and builds the IED data
 model for you.<br>
 <!-- -->No manual setup. No copy-paste errors.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-model-viewer">🧠 Model Viewer<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-model-viewer" class="hash-link" aria-label="Direct link to 🧠 Model Viewer" title="Direct link to 🧠 Model Viewer" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-model-viewer">🧠 Model Viewer<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-model-viewer" class="hash-link" aria-label="Direct link to 🧠 Model Viewer" title="Direct link to 🧠 Model Viewer" translate="no">​</a></h3>
 <p>Visualize your logical nodes, data objects, and attributes through an intuitive tree view.<br>
 <!-- -->It’s like opening up an IED and seeing how it thinks.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-multi-ied-simulation">🔄 Multi-IED Simulation<a href="https://abhilash-deliverain.github.io/deliverain-labs/blog/2025/11/07/iec61850-simulator#-multi-ied-simulation" class="hash-link" aria-label="Direct link to 🔄 Multi-IED Simulation" title="Direct link to 🔄 Multi-IED Simulation" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-multi-ied-simulation">🔄 Multi-IED Simulation<a href="https://labs.deliverain.com/blog/2025/11/07/iec61850-simulator#-multi-ied-simulation" class="hash-link" aria-label="Direct link to 🔄 Multi-IED Simulation" title="Direct link to 🔄 Multi-IED Simulation" translate="no">​</a></h3>
 <p>Need to simulate multiple IEDs talking to each other? Done.<br>
 <!-- -->Each IED runs as an independent instance, complete with its own configuration and data model.</p>
 <hr>
@@ -65,8 +65,8 @@ IEC 61850 communication efficiently and realistically.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
-        <id>https://abhilash-deliverain.github.io/deliverain-labs/blog/welcome</id>
-        <link href="https://abhilash-deliverain.github.io/deliverain-labs/blog/welcome"/>
+        <id>https://labs.deliverain.com/blog/welcome</id>
+        <link href="https://labs.deliverain.com/blog/welcome"/>
         <updated>2021-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer" class="">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer" class="">blog plugin</a>.</p>
@@ -79,7 +79,7 @@ IEC 61850 communication efficiently and realistically.</p>
 <li class=""><code>2019-05-30-welcome/index.md</code></li>
 </ul>
 <p>A blog post folder can be convenient to co-locate blog post images:</p>
-<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://abhilash-deliverain.github.io/deliverain-labs/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://labs.deliverain.com/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
 <p>The blog supports tags as well!</p>
 <p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
         <author>
@@ -96,8 +96,8 @@ IEC 61850 communication efficiently and realistically.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[MDX Blog Post]]></title>
-        <id>https://abhilash-deliverain.github.io/deliverain-labs/blog/mdx-blog-post</id>
-        <link href="https://abhilash-deliverain.github.io/deliverain-labs/blog/mdx-blog-post"/>
+        <id>https://labs.deliverain.com/blog/mdx-blog-post</id>
+        <link href="https://labs.deliverain.com/blog/mdx-blog-post"/>
         <updated>2021-08-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
         <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer" class="">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer" class="">MDX</a>.</p>
@@ -114,8 +114,8 @@ IEC 61850 communication efficiently and realistically.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Long Blog Post]]></title>
-        <id>https://abhilash-deliverain.github.io/deliverain-labs/blog/long-blog-post</id>
-        <link href="https://abhilash-deliverain.github.io/deliverain-labs/blog/long-blog-post"/>
+        <id>https://labs.deliverain.com/blog/long-blog-post</id>
+        <link href="https://labs.deliverain.com/blog/long-blog-post"/>
         <updated>2019-05-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
         <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
@@ -145,8 +145,8 @@ IEC 61850 communication efficiently and realistically.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>https://abhilash-deliverain.github.io/deliverain-labs/blog/first-blog-post</id>
-        <link href="https://abhilash-deliverain.github.io/deliverain-labs/blog/first-blog-post"/>
+        <id>https://labs.deliverain.com/blog/first-blog-post</id>
+        <link href="https://labs.deliverain.com/blog/first-blog-post"/>
         <updated>2019-05-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Lorem ipsum dolor sit amet...]]></summary>
         <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
