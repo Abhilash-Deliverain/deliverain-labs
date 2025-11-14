@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Deliverain Labs',
   tagline: 'Industrial data, protocols and engineering insights',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/deliverain-icon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -80,13 +80,15 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
+        respectPrefersColorScheme: false,
+        disableSwitch: true,
       },
       navbar: {
         title: 'Deliverain Labs',
         logo: {
           alt: 'Deliverain Labs Logo',
-          src: 'img/logo.svg',
+          src: 'img/deliverain-icon.png',
         },
         items: [
           {
